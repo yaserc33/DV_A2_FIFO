@@ -66,6 +66,8 @@ class environment;
   task post_test();
     wait(gen.done.triggered);  
     sco.result();
+
+    #2000;
     $finish();
   endtask
   

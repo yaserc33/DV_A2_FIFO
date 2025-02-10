@@ -41,6 +41,8 @@ initial begin
 
     env = new( fif, .mode(1));
     env.run();
+
+    
 end
 
 

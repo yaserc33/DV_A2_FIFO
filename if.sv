@@ -22,16 +22,15 @@ interface fifo_if #(parameter DEPTH=8, DATA_WIDTH=8)  ;
 
     task  write(bit [DATA_WIDTH-1:0] data);
     fif.w_en <= 1 ;
-    $display("a"); 
+     
     fif.r_en <= 0;
-    $display("b"); 
+    
     fif.data_in <= data;
-    $display("c");
+  
     @(posedge fif.clk);
-    $display("d");
+  
     $display("[drv] data sent to FIFO = %0d" , data);
     fif.w_en <=0; 
-    $display("e");
     endtask 
 
 

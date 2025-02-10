@@ -16,7 +16,11 @@ transaction tx;
     
         tx = new();
         forever begin
+           $display("Trying to get something from the generator ..."); 
             gen2drv.get(tx);
+             $display(" ..."); 
+
+
         
             if (tx.r_en)
                 fif.read();    
@@ -25,7 +29,8 @@ transaction tx;
                 fif.write(tx.data_in);  
                
         $display("[drv_debugg] : reset:%0d Wr:%0d rd:%0d din:%0d dout:%0d full:%0d empty:%0d",fif.rst_n, tx.w_en, tx.r_en, tx.data_in, tx.data_out, tx.full, tx.empty); 
-         @(posedge fif.clk);
+        // @(posedge fif.clk);
+     
         
 
        

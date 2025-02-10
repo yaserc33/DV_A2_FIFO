@@ -31,7 +31,7 @@ class scoreboard;
 
       if (rx.w_en) begin
         data_gen.push_front('{data: rx.data_in, valid: 1});  // to record the genrated value
-        $display("[SCO]:  %0d recived from [GEN] at %0t ", rx.data_in, $time);
+        $display("[SCO]:  %0d recived from [GEN] at %0t s", rx.data_in, $time);
       end
 
 
@@ -42,7 +42,7 @@ class scoreboard;
       if (rx.r_en) begin
         data_mon.push_front('{data: rx.data_out, valid: 1
                             });  // to record the  value coming from dut   
-        $display("[SCO]:  %0d recived from [MON]  at %0t ", rx.data_out, $time);
+        $display("[SCO]:  %0d recived from [MON]  at %0t s", rx.data_out, $time);
       end
 
 
@@ -71,7 +71,7 @@ class scoreboard;
 
 
 
-  
+
   task result;
       $display("\n\n\n-------------------Test Result--------------------------");
 
