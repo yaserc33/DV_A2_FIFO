@@ -7,12 +7,12 @@ class environment;
 
 
 
-    mailbox gen2drv ;
-    mailbox gen2soc ;
-    mailbox mon2sco ; 
+    mailbox #(transaction) gen2drv ;
+    mailbox #(transaction) gen2sco ;
+    mailbox #(transaction) mon2sco ; 
     virtual fifo_if fif;
 
-    event next;
+    event nextgs;
     int mode ;
     
     
@@ -20,10 +20,10 @@ class environment;
     function new(virtual fifo_if a, int mode);
 
       gen2drv = new();
-      gen2soc = new();
+      gen2sco = new();
       mon2sco = new();
     //objects
-      gen = new(gen2drv, gen2soc);
+      gen = new(gen2drv, gen2sco);
       drv= new(gen2drv);
       mon = new(mon2sco);
       sco = new (gen2sco,mon2sco);
@@ -33,8 +33,8 @@ class environment;
       mon.fif = fif;
 
     //event
-    gen.next = next;
-    sco.next = next;
+    gen.next = nextgs;
+    sco.next = nextgs;
 
 
     //select test
@@ -46,7 +46,7 @@ class environment;
   
   
   task pre_test();
-    drv.reset();
+    fif.reset();
   endtask
   
 

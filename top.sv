@@ -1,3 +1,11 @@
+`include "if.sv"
+`include "fifo.sv"
+`include "tran.sv"
+`include "gen.sv"
+`include "drv.sv"
+`include "mon.sv"
+`include "sco.sv"
+`include "env.sv"
 module top;
     
 parameter DEPTH=8;    
@@ -19,12 +27,18 @@ synchronous_fifo  #(DEPTH , DATA_WIDTH) DUT (
 );
 
 
-environment env ; 
-
 initial fif.clk <=0;
 always #10 fif.clk <= ~fif.clk;
 
+
+environment env ; 
+
+
+
 initial begin
+     
+  
+
     env = new( fif, .mode(1));
     env.run();
 end

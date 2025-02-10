@@ -2,8 +2,8 @@ class generator;
     
 
     transaction tx;
-    mailbox gen2soc;
-    mailbox gen2drv;
+    mailbox #(transaction) gen2soc;
+    mailbox #(transaction) gen2drv;
 
     event next;  // to make genrate wait until the transaction is proccesd
     event done; // generator finshed genrate all the casses 
@@ -14,10 +14,10 @@ class generator;
 
 
 
-    function new(mailbox a , mailbox b);
+    function new(mailbox #(transaction) a , mailbox #(transaction) b);
     gen2drv  = a ;
     gen2soc = b;
-    tx = new()
+    tx = new();
 
     endfunction //new()
 
@@ -27,21 +27,28 @@ class generator;
     task run(int mode);
    
    case (mode)
-    1: 
+    1: //first test v_items
+    begin 
         tx = new();
-        repeat(5) begin
+        repeat(10) begin
         assert (tx.randomize) else  $error("randomiztion faild at time = %t s" , $time);
-        tx.put(gen2drv);
-        tx.put(gen2soc);
-        $display("[GeN] : data sent to drv & sco = %0d" , tx.data_in );
-        wite(next.triggred);
+        gen2drv.put(tx.copy);
+        gen2soc.put(tx.copy);
+        //$display("[GeN] : data sent to drv & sco = %0d" , tx.data_in );
+        $display("[GEN_debugg] : Wr:%0d rd:%0d din:%0d dout:%0d full:%0d empty:%0d", tx.w_en, tx.r_en, tx.data_in, tx.data_out, tx.full, tx.empty);
+        wait(next.triggered);
         end
         ->done;
+    end
+    2: //second test
+    begin
+
+
+    end
 
    endcase
 
 endtask
-
 
 
 

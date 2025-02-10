@@ -1,58 +1,38 @@
 class driver;
 
 virtual fifo_if fif;
-mailbox gen2drv;
+mailbox #(transaction) gen2drv;
 transaction tx;
 
 
-    function new(mailbox a);
+    function new(mailbox #(transaction) a);
     gen2drv = a;
 
     endfunction //new()
 
 
 
-    task  reset;
-    fif.rst_n <= 1 ; 
-    @posedge(fif.clk);
-    fif.rst_n <= 0;
-    $display("[drv] reset done..");
-    endtask 
-
-    task  write;
-    fif.w_en <= 1 ; 
-    fif.r_en <= 0;
-    fif.data_in <= tx.data_in;
-    $display("[drv] data sent to FIFO = %0dxa" , tx.data_in);
-    @posedge(if.clk);
-    fif.w_en <=0; 
-    endtask 
-
-
-    task  read;
-    fif.w_en <= 0 ;
-    fif.r_en <= 1;
-    $display("[drv] read  requset sent to FIFO" );
-    @posedge(if.clk);
-    fif.r_en <=0; 
-    endtask 
-
-
     task run();
-     tx = new();
-    forever begin
-        gen2drv.get(tx);
+    
+        tx = new();
+        forever begin
+            gen2drv.get(tx);
+        
+            if (tx.r_en)
+                fif.read();    
+            
+            else if (tx.w_en)  
+                fif.write(tx.data_in);  
+               
+        $display("[drv_debugg] : reset:%0d Wr:%0d rd:%0d din:%0d dout:%0d full:%0d empty:%0d",fif.rst_n, tx.w_en, tx.r_en, tx.data_in, tx.data_out, tx.full, tx.empty); 
+         @(posedge fif.clk);
+        
 
-        if (tx.rst_n) 
-            reset();
-        else if (tx.r_en)
-            read();
-        else 
-            write();
-    end
+       
+        end
+
+
     endtask
-
-
 
 
 
