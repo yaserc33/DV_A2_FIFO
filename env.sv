@@ -8,33 +8,31 @@ class environment;
 
 
     mailbox #(transaction) gen2drv ;
-    mailbox #(transaction) gen2sco ;
     mailbox #(transaction) mon2sco ; 
     virtual fifo_if fif;
 
-    event nextgs;
-    int mode ;
+ 
+    int mode ; // to sellect which test gen will do  
+    int count ; //to controll the number  of stimulus gen will generate then will be linked with soc to control when simulation end
     
     
     
-    function new(virtual fifo_if a, int mode);
+    function new(virtual fifo_if a, int mode , int count);
 
       gen2drv = new();
-      gen2sco = new();
       mon2sco = new();
     //objects
-      gen = new(gen2drv, gen2sco);
+      gen = new(gen2drv,count);
       drv= new(gen2drv);
       mon = new(mon2sco);
-      sco = new (gen2sco,mon2sco);
+      sco = new (mon2sco,count);
     //intrfaces 
       fif = a;
       drv.fif = fif;
       mon.fif = fif;
 
-    //event
-    gen.next = nextgs;
-    sco.next = nextgs;
+    
+
 
 
     //select test
@@ -64,10 +62,8 @@ class environment;
 
 
   task post_test();
-    wait(gen.done.triggered);  
+    wait(sco.done.triggered);  
     sco.result();
-
-    #2000;
     $finish();
   endtask
   

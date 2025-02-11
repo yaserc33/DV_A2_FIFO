@@ -11,37 +11,37 @@ interface fifo_if #(parameter DEPTH=8, DATA_WIDTH=8)  ;
 
     task  reset;
     fif.rst_n <= 0 ; 
-     @(posedge fif.clk);
+     @(negedge fif.clk);
     fif.rst_n <= 1;
-     @(posedge fif.clk);
-    $display("[drv] reset done..  "  );
+     @(negedge fif.clk);
+    $display("[drv] reset done.., at %0t" ,$time );
     endtask 
 
 
 
 
     task  write(bit [DATA_WIDTH-1:0] data);
+     @(negedge fif.clk);
     fif.w_en <= 1 ;
      
     fif.r_en <= 0;
-    
+
     fif.data_in <= data;
   
-    @(posedge fif.clk);
-  
-    $display("[drv] data sent to FIFO = %0d" , data);
-    fif.w_en <=0; 
+    //$display("[drv] data sent to FIFO = %0d  at %0t" , data , $time);
+   
     endtask 
 
 
 
 
     task  read;
+    @(negedge fif.clk);
     fif.w_en <= 0 ;
     fif.r_en <= 1;
-    $display("[drv] read  requset sent to FIFO" );
-    @(posedge fif.clk);
-    fif.r_en <=0; 
+    //$display("[drv] read  requset sent to FIFO ,at %0t" ,$time );
+ 
+
     endtask 
 
 

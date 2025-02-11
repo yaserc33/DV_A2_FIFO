@@ -2,21 +2,18 @@ class generator;
     
 
     transaction tx;
-    mailbox #(transaction) gen2soc;
     mailbox #(transaction) gen2drv;
 
-    event next;  // to make genrate wait until the transaction is proccesd
-    event done; // generator finshed genrate all the casses 
-
+    int count; //to controll the number  of stimulus gen will generate 
     int mode ;
 
 
 
 
 
-    function new(mailbox #(transaction) a , mailbox #(transaction) b);
+    function new(  mailbox #(transaction) a,int count );
     gen2drv  = a ;
-    gen2soc = b;
+    this.count = count;
     endfunction //new()
 
 
@@ -28,17 +25,14 @@ class generator;
     1: //first test v_items
     begin 
         tx = new();
-        repeat(10) begin
+        repeat(count) begin
         assert (tx.randomize) else  $error("randomiztion faild at time = %t s" , $time);
-        $display("%d" , gen2drv.num());
         gen2drv.put(tx.copy);
-         $display("%d" , gen2soc.num());
-        gen2soc.put(tx.copy);
         //$display("[GeN] : data sent to drv & sco = %0d" , tx.data_in );
-        $display("[GEN_debugg] : Wr:%0d rd:%0d din:%0d dout:%0d full:%0d empty:%0d", tx.w_en, tx.r_en, tx.data_in, tx.data_out, tx.full, tx.empty);
-        //wait(next.triggered);
+        $display("[GEN_debugg] : Wr:%d rd:%d din:%d dout:%d full:%d empty:%d at %0t", tx.w_en, tx.r_en, tx.data_in, tx.data_out, tx.full, tx.empty , $time);
         end
-        ->done;
+       
+      
     end
     2: //second test
     begin

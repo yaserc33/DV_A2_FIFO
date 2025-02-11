@@ -39,12 +39,17 @@ initial begin
      
   
 
-    env = new( fif, .mode(1));
+    env = new( fif, .mode(1),.count(10));
     env.run();
 
     
 end
 
+
+initial begin
+#500;
+$finish;
+end
 
 
 
