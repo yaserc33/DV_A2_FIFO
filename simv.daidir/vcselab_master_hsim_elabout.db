@@ -1,4 +1,4 @@
-fHsimDesignHasDebugNodes           	0
+fHsimDesignHasDebugNodes           	7
 fNSParam                           	256
 fLargeSizeSdfTest                  	0
 fHsimDelayGateMbme                 	0
@@ -225,7 +225,7 @@ fHsimNewEvcdWTest                  	0
 fHsimEvcdDbgFlags                  	0
 fHsimNewEvcdMultiDrvFmt            	1
 fHsimRelPath                       	0
-fHsimDumpOffsetData                	0
+fHsimDumpOffsetData                	1
 fFlopGlitchDetect                  	0
 fHsimClkGlitch                     	0
 fHsimGlitchDumpOnce                	0
@@ -839,7 +839,7 @@ fHsimPreInlineInstNum64            	0
 fHsimAutoInstNum64Limit            	-7
 fHsimAutoEnableInstNum64PC         	0
 fHsCgOptFixLeaf                    	1
-fHsimDumpVars                      	0
+fHsimDumpVars                      	1
 fFgpTbReactiveLite                 	1
 fHsCgOptCongLite                   	1
 fHsimGateDiag                      	0

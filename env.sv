@@ -17,7 +17,7 @@ class environment;
     
     
     
-    function new(virtual fifo_if a, int mode , int count);
+    function new(virtual fifo_if fif, int mode , int count);
 
       gen2drv = new();
       mon2sco = new();
@@ -27,9 +27,9 @@ class environment;
       mon = new(mon2sco);
       sco = new (mon2sco,count);
     //intrfaces 
-      fif = a;
-      drv.fif = fif;
-      mon.fif = fif;
+      this.fif = fif;
+      drv.fif = this.fif;
+      mon.fif = this.fif;
 
     
 
@@ -44,7 +44,7 @@ class environment;
   
   
   task pre_test();
-    fif.reset();
+    drv.reset();
   endtask
   
 
@@ -53,7 +53,7 @@ class environment;
   task test();
     fork
       gen.run(mode);
-      drv.run();
+      drv.run(); 
       mon.run();
       sco.run();
     join_any
@@ -64,7 +64,6 @@ class environment;
   task post_test();
     wait(sco.done.triggered);  
     sco.result();
-    $finish();
   endtask
   
 
@@ -74,6 +73,7 @@ class environment;
     pre_test();
     test();
     post_test();
+    disable fork;
   endtask
 
 

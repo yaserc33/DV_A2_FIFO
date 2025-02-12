@@ -1,0 +1,653 @@
+*design* DebussyLib (btIdent Verdi_W-2024.09)
+Command arguments:
+    +define+verilog
+    dump.vcd
+
+
+*Error* Syntax error at $date
+"dump.vcd", 1: 
+
+*Error* Syntax error at Wed
+"dump.vcd", 2: 
+
+*Error* Syntax error at $end
+"dump.vcd", 3: 
+
+*Error* Syntax error at $version
+"dump.vcd", 5: 
+
+*Error* Syntax error at Synopsys
+"dump.vcd", 6: 
+
+*Error* Syntax error at $end
+"dump.vcd", 7: 
+
+*Error* Syntax error at $timescale
+"dump.vcd", 9: 
+
+*Error* Syntax error at 10ps
+"dump.vcd", 10: 
+
+*Error* Syntax error at $end
+"dump.vcd", 11: 
+
+*Error* Syntax error at $comment
+"dump.vcd", 13: 
+
+*Error* Syntax error at $scope
+"dump.vcd", 16: 
+
+*Error* Syntax error at $upscope
+"dump.vcd", 17: 
+
+*Error* Syntax error at $scope
+"dump.vcd", 20: 
+
+*Error* Syntax error at $scope
+"dump.vcd", 22: 
+
+*Error* Syntax error at $upscope
+"dump.vcd", 23: 
+
+*Error* Syntax error at $scope
+"dump.vcd", 26: 
+
+*Error* Syntax error at $upscope
+"dump.vcd", 27: 
+
+*Error* Syntax error at $scope
+"dump.vcd", 30: 
+
+*Error* Syntax error at $upscope
+"dump.vcd", 31: 
+
+*Error* Syntax error at $scope
+"dump.vcd", 34: 
+
+*Error* Syntax error at $upscope
+"dump.vcd", 35: 
+
+*Error* Syntax error at $scope
+"dump.vcd", 38: 
+
+*Error* Syntax error at $var
+"dump.vcd", 39: 
+
+*Error* Syntax error at $var
+"dump.vcd", 40: 
+
+*Error* Syntax error at $var
+"dump.vcd", 41: 
+
+*Error* Syntax error at $var
+"dump.vcd", 42: 
+
+*Error* Syntax error at $var
+"dump.vcd", 43: 
+
+*Error* Syntax error at $var
+"dump.vcd", 44: 
+
+*Error* Syntax error at $var
+"dump.vcd", 45: 
+
+*Error* Syntax error at $var
+"dump.vcd", 46: 
+
+*Error* Syntax error at $scope
+"dump.vcd", 48: 
+
+*Error* Syntax error at $upscope
+"dump.vcd", 49: 
+
+*Error* Syntax error at $scope
+"dump.vcd", 52: 
+
+*Error* Syntax error at $var
+"dump.vcd", 53: 
+
+*Error* Syntax error at $upscope
+"dump.vcd", 54: 
+
+*Error* Syntax error at $scope
+"dump.vcd", 57: 
+
+*Error* Syntax error at $upscope
+"dump.vcd", 58: 
+
+*Error* Syntax error at $upscope
+"dump.vcd", 60: 
+
+*Error* Syntax error at $scope
+"dump.vcd", 63: 
+
+*Error* Syntax error at $var
+"dump.vcd", 64: 
+
+*Error* Syntax error at $var
+"dump.vcd", 65: 
+
+*Error* Syntax error at $var
+"dump.vcd", 66: 
+
+*Error* Syntax error at $var
+"dump.vcd", 67: 
+
+*Error* Syntax error at $var
+"dump.vcd", 68: 
+
+*Error* Syntax error at $var
+"dump.vcd", 69: 
+
+*Error* Syntax error at $var
+"dump.vcd", 70: 
+
+*Error* Syntax error at $var
+"dump.vcd", 71: 
+
+*Error* Syntax error at $var
+"dump.vcd", 72: 
+
+*Error* Syntax error at $var
+"dump.vcd", 73: 
+
+*Error* Syntax error at $var
+"dump.vcd", 74: 
+
+*Error* Syntax error at $upscope
+"dump.vcd", 75: 
+
+*Error* Syntax error at $upscope
+"dump.vcd", 77: 
+
+*Error* Syntax error at $enddefinitions
+"dump.vcd", 79: 
+
+*Error* usage of using constructs outside of modules or primitives is supported only if the option '-sv' is specified
+"dump.vcd", 81: 
+
+*Error* Syntax error at #
+"dump.vcd", 81: 
+
+*Error* Syntax error at $dumpvars
+"dump.vcd", 82: 
+
+*Error* Syntax error at b00000000
+"dump.vcd", 83: 
+
+*Error* Syntax error at bxxxxxxxx
+"dump.vcd", 84: 
+
+*Error* Syntax error at b00000000
+"dump.vcd", 85: 
+
+*Error* Syntax error at x4
+"dump.vcd", 86: 
+
+*Error* Syntax error at b00000000
+"dump.vcd", 87: 
+
+*Error* Syntax error at b0000
+"dump.vcd", 88: 
+
+*Error* Syntax error at b0000
+"dump.vcd", 89: 
+
+*Error* Syntax error at bxxxxxxxx
+"dump.vcd", 90: 
+
+*Error* Syntax error at 0
+"dump.vcd", 91: 
+
+*Error* Syntax error at 1
+"dump.vcd", 92: 
+
+*Error* Syntax error at 0
+"dump.vcd", 93: 
+
+*Error* Syntax error at x$
+"dump.vcd", 94: 
+
+*Error* Syntax error at 0
+"dump.vcd", 95: 
+
+*Error* Syntax error at x
+"dump.vcd", 96: 
+
+*Error* Syntax error at 0
+"dump.vcd", 97: 
+
+*Error* Syntax error at 11
+"dump.vcd", 98: 
+
+*Error* Syntax error at 00
+"dump.vcd", 99: 
+
+*Error* Syntax error at x
+"dump.vcd", 100: 
+
+*Error* Syntax error at 0
+"dump.vcd", 101: 
+
+*Error* Syntax error at x
+"dump.vcd", 102: 
+
+*Error* Syntax error at $end
+"dump.vcd", 103: 
+
+*Error* Syntax error at 04
+"dump.vcd", 104: 
+
+*Error* usage of using constructs outside of modules or primitives is supported only if the option '-sv' is specified
+"dump.vcd", 105: 
+
+*Error* Syntax error at #
+"dump.vcd", 105: 
+
+*Error* Syntax error at 1
+"dump.vcd", 106: 
+
+*Error* Syntax error at 1
+"dump.vcd", 107: 
+
+*Error* Syntax error at b11011100
+"dump.vcd", 108: 
+
+*Error* Syntax error at 1
+"dump.vcd", 109: 
+
+*Error* Syntax error at 1
+"dump.vcd", 110: 
+
+*Error* usage of using constructs outside of modules or primitives is supported only if the option '-sv' is specified
+"dump.vcd", 111: 
+
+*Error* Syntax error at #
+"dump.vcd", 111: 
+
+*Error* Syntax error at 0
+"dump.vcd", 112: 
+
+*Error* Syntax error at 0
+"dump.vcd", 113: 
+
+*Error* Syntax error at b01100100
+"dump.vcd", 114: 
+
+*Error* Syntax error at 1
+"dump.vcd", 115: 
+
+*Error* Syntax error at 1
+"dump.vcd", 116: 
+
+*Error* Syntax error at 0
+"dump.vcd", 117: 
+
+*Error* Syntax error at 0
+"dump.vcd", 118: 
+
+*Error* Syntax error at b11011100
+"dump.vcd", 119: 
+
+*Error* Syntax error at b11011100
+"dump.vcd", 120: 
+
+*Error* usage of using constructs outside of modules or primitives is supported only if the option '-sv' is specified
+"dump.vcd", 121: 
+
+*Error* Syntax error at #
+"dump.vcd", 121: 
+
+*Error* Syntax error at 1
+"dump.vcd", 122: 
+
+*Error* Syntax error at 1
+"dump.vcd", 123: 
+
+*Error* Syntax error at b0001
+"dump.vcd", 124: 
+
+*Error* Syntax error at 01
+"dump.vcd", 125: 
+
+*Error* Syntax error at 0
+"dump.vcd", 126: 
+
+*Error* usage of using constructs outside of modules or primitives is supported only if the option '-sv' is specified
+"dump.vcd", 127: 
+
+*Error* Syntax error at #
+"dump.vcd", 127: 
+
+*Error* Syntax error at 0
+"dump.vcd", 128: 
+
+*Error* Syntax error at 0
+"dump.vcd", 129: 
+
+*Error* Syntax error at b00010100
+"dump.vcd", 130: 
+
+*Error* Syntax error at b01100100
+"dump.vcd", 131: 
+
+*Error* Syntax error at b01100100
+"dump.vcd", 132: 
+
+*Error* usage of using constructs outside of modules or primitives is supported only if the option '-sv' is specified
+"dump.vcd", 133: 
+
+*Error* Syntax error at #
+"dump.vcd", 133: 
+
+*Error* Syntax error at 1
+"dump.vcd", 134: 
+
+*Error* Syntax error at 1
+"dump.vcd", 135: 
+
+*Error* Syntax error at b0010
+"dump.vcd", 136: 
+
+*Error* usage of using constructs outside of modules or primitives is supported only if the option '-sv' is specified
+"dump.vcd", 137: 
+
+*Error* Syntax error at #
+"dump.vcd", 137: 
+
+*Error* Syntax error at 0
+"dump.vcd", 138: 
+
+*Error* Syntax error at 0
+"dump.vcd", 139: 
+
+*Error* Syntax error at b10111000
+"dump.vcd", 140: 
+
+*Error* Syntax error at b00010100
+"dump.vcd", 141: 
+
+*Error* Syntax error at b00010100
+"dump.vcd", 142: 
+
+*Error* usage of using constructs outside of modules or primitives is supported only if the option '-sv' is specified
+"dump.vcd", 143: 
+
+*Error* Syntax error at #
+"dump.vcd", 143: 
+
+*Error* Syntax error at 1
+"dump.vcd", 144: 
+
+*Error* Syntax error at 1
+"dump.vcd", 145: 
+
+*Error* Syntax error at b0011
+"dump.vcd", 146: 
+
+*Error* usage of using constructs outside of modules or primitives is supported only if the option '-sv' is specified
+"dump.vcd", 147: 
+
+*Error* Syntax error at #
+"dump.vcd", 147: 
+
+*Error* Syntax error at 0
+"dump.vcd", 148: 
+
+*Error* Syntax error at 0
+"dump.vcd", 149: 
+
+*Error* Syntax error at b11001110
+"dump.vcd", 150: 
+
+*Error* Syntax error at b10111000
+"dump.vcd", 151: 
+
+*Error* Syntax error at b10111000
+"dump.vcd", 152: 
+
+*Error* usage of using constructs outside of modules or primitives is supported only if the option '-sv' is specified
+"dump.vcd", 153: 
+
+*Error* Syntax error at #
+"dump.vcd", 153: 
+
+*Error* Syntax error at 1
+"dump.vcd", 154: 
+
+*Error* Syntax error at 1
+"dump.vcd", 155: 
+
+*Error* Syntax error at b0100
+"dump.vcd", 156: 
+
+*Error* usage of using constructs outside of modules or primitives is supported only if the option '-sv' is specified
+"dump.vcd", 157: 
+
+*Error* Syntax error at #
+"dump.vcd", 157: 
+
+*Error* Syntax error at 0
+"dump.vcd", 158: 
+
+*Error* Syntax error at 0
+"dump.vcd", 159: 
+
+*Error* Syntax error at b11001110
+"dump.vcd", 160: 
+
+*Error* Syntax error at b11001110
+"dump.vcd", 161: 
+
+*Error* usage of using constructs outside of modules or primitives is supported only if the option '-sv' is specified
+"dump.vcd", 162: 
+
+*Error* Syntax error at #
+"dump.vcd", 162: 
+
+*Error* Syntax error at 1
+"dump.vcd", 163: 
+
+*Error* Syntax error at 1
+"dump.vcd", 164: 
+
+*Error* Syntax error at b0101
+"dump.vcd", 165: 
+
+*Error* usage of using constructs outside of modules or primitives is supported only if the option '-sv' is specified
+"dump.vcd", 166: 
+
+*Error* Syntax error at #
+"dump.vcd", 166: 
+
+*Error* Syntax error at 0
+"dump.vcd", 167: 
+
+*Error* Syntax error at 0
+"dump.vcd", 168: 
+
+*Error* Syntax error at 0
+"dump.vcd", 169: 
+
+*Error* Syntax error at 0
+"dump.vcd", 170: 
+
+*Error* Syntax error at 1
+"dump.vcd", 171: 
+
+*Error* Syntax error at 1
+"dump.vcd", 172: 
+
+*Error* usage of using constructs outside of modules or primitives is supported only if the option '-sv' is specified
+"dump.vcd", 173: 
+
+*Error* Syntax error at #
+"dump.vcd", 173: 
+
+*Error* Syntax error at 1
+"dump.vcd", 174: 
+
+*Error* Syntax error at 1
+"dump.vcd", 175: 
+
+*Error* Syntax error at b11011100
+"dump.vcd", 176: 
+
+*Error* Syntax error at b11011100
+"dump.vcd", 177: 
+
+*Error* Syntax error at b0001
+"dump.vcd", 178: 
+
+*Error* usage of using constructs outside of modules or primitives is supported only if the option '-sv' is specified
+"dump.vcd", 179: 
+
+*Error* Syntax error at #
+"dump.vcd", 179: 
+
+*Error* Syntax error at 0
+"dump.vcd", 180: 
+
+*Error* Syntax error at 0
+"dump.vcd", 181: 
+
+*Error* usage of using constructs outside of modules or primitives is supported only if the option '-sv' is specified
+"dump.vcd", 182: 
+
+*Error* Syntax error at #
+"dump.vcd", 182: 
+
+*Error* Syntax error at 1
+"dump.vcd", 183: 
+
+*Error* Syntax error at 1
+"dump.vcd", 184: 
+
+*Error* Syntax error at b01100100
+"dump.vcd", 185: 
+
+*Error* Syntax error at b01100100
+"dump.vcd", 186: 
+
+*Error* Syntax error at b0010
+"dump.vcd", 187: 
+
+*Error* usage of using constructs outside of modules or primitives is supported only if the option '-sv' is specified
+"dump.vcd", 188: 
+
+*Error* Syntax error at #
+"dump.vcd", 188: 
+
+*Error* Syntax error at 0
+"dump.vcd", 189: 
+
+*Error* Syntax error at 0
+"dump.vcd", 190: 
+
+*Error* usage of using constructs outside of modules or primitives is supported only if the option '-sv' is specified
+"dump.vcd", 191: 
+
+*Error* Syntax error at #
+"dump.vcd", 191: 
+
+*Error* Syntax error at 1
+"dump.vcd", 192: 
+
+*Error* Syntax error at 1
+"dump.vcd", 193: 
+
+*Error* Syntax error at b00010100
+"dump.vcd", 194: 
+
+*Error* Syntax error at b00010100
+"dump.vcd", 195: 
+
+*Error* Syntax error at b0011
+"dump.vcd", 196: 
+
+*Error* usage of using constructs outside of modules or primitives is supported only if the option '-sv' is specified
+"dump.vcd", 197: 
+
+*Error* Syntax error at #
+"dump.vcd", 197: 
+
+*Error* Syntax error at 0
+"dump.vcd", 198: 
+
+*Error* Syntax error at 0
+"dump.vcd", 199: 
+
+*Error* usage of using constructs outside of modules or primitives is supported only if the option '-sv' is specified
+"dump.vcd", 200: 
+
+*Error* Syntax error at #
+"dump.vcd", 200: 
+
+*Error* Syntax error at 1
+"dump.vcd", 201: 
+
+*Error* Syntax error at 1
+"dump.vcd", 202: 
+
+*Error* Syntax error at b10111000
+"dump.vcd", 203: 
+
+*Error* Syntax error at b10111000
+"dump.vcd", 204: 
+
+*Error* Syntax error at b0100
+"dump.vcd", 205: 
+
+*Error* usage of using constructs outside of modules or primitives is supported only if the option '-sv' is specified
+"dump.vcd", 206: 
+
+*Error* Syntax error at #
+"dump.vcd", 206: 
+
+*Error* Syntax error at 0
+"dump.vcd", 207: 
+
+*Error* Syntax error at 0
+"dump.vcd", 208: 
+
+*Error* usage of using constructs outside of modules or primitives is supported only if the option '-sv' is specified
+"dump.vcd", 209: 
+
+*Error* Syntax error at #
+"dump.vcd", 209: 
+
+*Error* Syntax error at 1
+"dump.vcd", 210: 
+
+*Error* Syntax error at 1
+"dump.vcd", 211: 
+
+*Error* Syntax error at b11001110
+"dump.vcd", 212: 
+
+*Error* Syntax error at b11001110
+"dump.vcd", 213: 
+
+*Error* Syntax error at b0101
+"dump.vcd", 214: 
+
+*Error* Syntax error at 11
+"dump.vcd", 215: 
+
+*Error* Syntax error at 1
+"dump.vcd", 216: 
+
+*Error* usage of using constructs outside of modules or primitives is supported only if the option '-sv' is specified
+"dump.vcd", 217: 
+
+*Error* Syntax error at #
+"dump.vcd", 217: 
+
+*Error* Syntax error at 0
+"dump.vcd", 218: 
+
+*Error* Syntax error at 0
+"dump.vcd", 219: 
+Highest level modules:
+
+Total	215 error(s),   0 warning(s)

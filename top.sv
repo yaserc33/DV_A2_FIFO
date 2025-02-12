@@ -6,10 +6,11 @@
 `include "mon.sv"
 `include "sco.sv"
 `include "env.sv"
-module top;
+module top ;
     
 parameter DEPTH=8;    
 parameter DATA_WIDTH=8;
+
 
 
 
@@ -31,7 +32,7 @@ initial fif.clk <=0;
 always #10 fif.clk <= ~fif.clk;
 
 
-environment env ; 
+environment env ,env1; 
 
 
 
@@ -42,14 +43,37 @@ initial begin
     env = new( fif, .mode(1),.count(10));
     env.run();
 
-    
-end
+  
 
+
+     env = new( fif, .mode(2),.count(DEPTH));
+     env.run();
+
+
+    // [write when fifo is full] test
+    env = new( fif, .mode(3),.count(17)); // count = depeth (write) + 1(Write) + depth (read)
+    env.run();
+
+
+    //read when fifo is full] test
+    env = new( fif, .mode(4),.count(DEPTH+1)); // count = depeth (write) + 1(Write) + depth (read)
+    env.run();
+
+
+  
+    
+
+
+   
+    $finish;
+end
 
 initial begin
-#500;
-$finish;
+  $dumpfile("dump.vcd");
+  $dumpvars;
 end
+
+
 
 
 
