@@ -33,7 +33,15 @@ transaction tx;
    
     endtask 
 
+    task read_write();
+     @(negedge fif.clk);
+    fif.w_en <= 1 ;
+     
+    fif.r_en <= 1;
 
+    fif.data_in <= tx.data_in;
+
+    endtask
 
 
     task  read;
@@ -51,8 +59,11 @@ transaction tx;
         forever begin
         
             gen2drv.get(tx);
-         
-            if (tx.r_en)
+
+
+            if(tx.r_en&&tx.w_en)
+                read_write();
+            else if (tx.r_en)
                 read();    
             
             else if (tx.w_en)  

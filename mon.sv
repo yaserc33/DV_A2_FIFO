@@ -27,7 +27,8 @@ transaction rx;
         repeat(1)@(negedge fif.clk);
         mon2sco.put(rx.copy);
         
-        
+        //$display("[mon_debugg] : Wr:%0d rd:%0d din:%0d dout:%0d full:%0d empty:%0d at %t", rx.w_en, rx.r_en, rx.data_in, rx.data_out, rx.full, rx.empty , $time); 
+
        end 
     endtask 
 endclass

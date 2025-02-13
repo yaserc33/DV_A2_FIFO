@@ -56,9 +56,12 @@ initial begin
 
 
     //read when fifo is full] test
-    env = new( fif, .mode(4),.count(DEPTH+1)); // count = depeth (write) + 1(Write) + depth (read)
+    env = new( fif, .mode(4),.count(DEPTH+1));
     env.run();
 
+     //read -write same time test
+    env = new( fif, .mode(5),.count(10)); 
+    env.run();
 
   
     

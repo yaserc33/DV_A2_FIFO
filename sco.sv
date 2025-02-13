@@ -75,11 +75,11 @@ class scoreboard #(
         end
 
 
-        gen_count++;
+        //gen_count++;
       end  
       
       //handel read 
-      else if (tr.r_en) begin
+      if (tr.r_en) begin
 
         if (tr.empty == 0) begin
           temp = actual.pop_front();
@@ -90,11 +90,11 @@ class scoreboard #(
             err++;
           end
         end 
-        gen_count++;
       end
 
+        gen_count++;
 
-      //$display("[SCO -debugging] :  Wr:%0d rd:%0d din:%0d dout:%0d full:%0d empty:%0d", tr.w_en, tr.r_en, tr.data_in, tr.data_out, tr.full, tr.empty);
+      //$display("[SCO -debugging] :  Wr:%0d rd:%0d din:%0d dout:%0d full:%0d empty:%0d\n\n\n", tr.w_en, tr.r_en, tr.data_in, tr.data_out, tr.full, tr.empty);
 
 
 
